@@ -22,6 +22,7 @@
       <a href="#listen">Listen</a>
       <a href="#videos">Videos</a>
       <a href="#record">The Record</a>
+      <a href="#fanmail">Fan Mail</a>
       <a href="https://faricakimora.netlify.app/">Farica☆Kimora</a>
     </div>
   </nav>
@@ -102,6 +103,24 @@
         <img src="images/ad1.jpg" alt="Lord of Flies poster" loading="lazy">
       </div>
     </section>
+    <!-- FAN MAIL -->
+    <section id="fanmail" class="fanmail">
+      <h2>Fan Mail</h2>
+      <p class="fm-intro">Got something to say to Farica? Write it here. She reads them.</p>
+      <form id="fmForm" novalidate>
+        <div class="fm-row">
+          <label>Name <input name="name" maxlength="80" autocomplete="name" placeholder="Anonymous"></label>
+          <label>Email <small>(optional, if you'd like a reply)</small><input name="email" type="email" maxlength="120" autocomplete="email"></label>
+        </div>
+        <label>Message <textarea name="message" rows="6" maxlength="2000" required></textarea></label>
+        <label class="fm-hp" aria-hidden="true">Website <input name="website" tabindex="-1" autocomplete="off"></label>
+        <div class="fm-send">
+          <button class="btn" type="submit">Send ✶</button>
+          <span class="fm-count"><span id="fmLeft">2000</span> left</span>
+        </div>
+        <p class="fm-status" id="fmStatus" role="status"></p>
+      </form>
+    </section>
   </main>
 
   <footer>
@@ -116,6 +135,7 @@
       <a href="https://farica-kimora-slut-life.netlify.app/">Slut Life</a>
       <a href="https://soundcloud.com/farica-kimora">SoundCloud</a>
       <a href="https://www.instagram.com/farica.kimora/">Instagram</a>
+      <a href="https://gamejolt.com/@FaricaKimora">GameJolt</a>
     </div>
     <p>&copy; <span id="year">2026</span> Farica Kimora · Cursed Entertainment</p>
   </footer>
