@@ -115,23 +115,6 @@ section h2::after { content: " ✶"; color: var(--pink); font-size: .5em; vertic
 .record-grid img:nth-child(even) { transform: rotate(1.5deg); }
 .record-grid img:hover { transform: rotate(0) scale(1.03); }
 
-/* fan mail */
-.fm-intro { color: var(--muted); margin: -10px 0 26px; }
-#fmForm { display: grid; gap: 16px; max-width: 760px; }
-.fm-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-#fmForm label { display: grid; gap: 6px; font: 1.2rem "Bebas Neue", sans-serif; letter-spacing: .05em; }
-#fmForm label small { font: .72rem "Space Grotesk", sans-serif; color: var(--muted); letter-spacing: 0; }
-#fmForm input, #fmForm textarea {
-  width: 100%; padding: 12px 14px; background: var(--ink-2); color: var(--cream); border: 2px solid var(--line);
-  font: 1rem "Space Grotesk", sans-serif; resize: vertical;
-}
-#fmForm input:focus, #fmForm textarea:focus { outline: none; border-color: var(--mint); box-shadow: 4px 4px 0 var(--pink); }
-.fm-hp { position: absolute; left: -9999px; }
-.fm-send { display: flex; align-items: center; gap: 18px; }
-.fm-count { color: var(--muted); font-size: .8rem; }
-.fm-status { margin: 0; min-height: 1.4em; color: var(--mint); }
-.fm-status.err { color: var(--pink); }
-
 /* footer */
 footer { padding: 50px 5vw 40px; border-top: 3px solid var(--mint); text-align: center; color: var(--muted); font-size: .85rem; }
 .foot-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 34px; margin-bottom: 20px; }
@@ -178,7 +161,6 @@ body.has-player footer { padding-bottom: 110px; }
   .hero-buttons { justify-content: center; }
   section { padding: 70px 16px; }
   .record-grid { grid-template-columns: repeat(2, 1fr); }
-  .fm-row { grid-template-columns: 1fr; }
   .tracks li { grid-template-columns: 3ch 44px minmax(0, 1fr) auto; gap: 4px 12px; padding: 10px 6px; }
   .tracks li .fk-stats { grid-column: 3 / -1; }
   .tracks li img { width: 44px; height: 44px; }

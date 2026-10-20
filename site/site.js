@@ -119,39 +119,4 @@
   }));
   audio.addEventListener("play", () => videos.forEach((v) => v.pause()));
 
-  // ---------- fan mail (goes to the inbox on the main Netlify site) ----------
-  const form = $("fmForm");
-  const status = $("fmStatus");
-  const msg = form.elements.message;
-  msg.addEventListener("input", () => { $("fmLeft").textContent = 2000 - msg.value.length; });
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form));
-    status.classList.remove("err");
-    if (data.message.trim().length < 2) { status.classList.add("err"); status.textContent = "Write a message first."; return; }
-
-    const btn = form.querySelector("button");
-    btn.disabled = true;
-    status.textContent = "Sending…";
-    let res = null;
-    try {
-      res = await fetch("https://faricakimora.netlify.app/api/fanmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, from: "Lord of Flies" }),
-      });
-    } catch {}
-    btn.disabled = false;
-
-    if (res && res.ok) {
-      form.reset();
-      $("fmLeft").textContent = 2000;
-      status.textContent = "Sent. Thank you ✶";
-    } else {
-      const err = res ? (await res.json().catch(() => ({}))).error : null;
-      status.classList.add("err");
-      status.textContent = err || "Couldn't send right now. Try again later.";
-    }
-  });
 })();
